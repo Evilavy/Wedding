@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joyeux 18ème Anniversaire – Laureine 🎀</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ✨ PARTICLES BACKGROUND -->
+    <div class="particles" id="particles"></div>
+
+    <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <p class="hero__eyebrow">✨ &nbsp; Bienvenue à une célébration très spéciale &nbsp; ✨</p>
+            <h1 class="hero__title">Joyeux<br><span class="script">18<sup>ème</sup> Anniversaire</span></h1>
+            <h2 class="hero__name">Laureine Martine Étienne</h2>
+            <p class="hero__date">21 Mars 2008 · Paris, La Pitié-Salpêtrière</p>
+            <div class="hero__divider">
+                <span></span><span class="diamond">◆</span><span></span>
+            </div>
+            <p class="hero__tagline">Dix-huit ans de lumière, d'amour et de grâce.</p>
+            <a href="#invitation" class="btn btn--hero">Voir l'invitation ↓</a>
+        </div>
+
+        <!-- Main photo -->
+        <div class="hero__photo-frame">
+            <div class="hero__photo-img" id="photo-main">
+                <img src="images/actuel.jpeg" alt="Laureine, photo actuelle" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       COUNTDOWN
+  ══════════════════════════════════════════ -->
+    <section class="countdown-section">
+        <div class="container">
+            <p class="section-label">Compte à rebours</p>
+            <div class="countdown" id="countdown">
+                <div class="countdown__item"><span id="cd-days" class="countdown__num">00</span><span
+                        class="countdown__unit">Jours</span></div>
+                <div class="countdown__sep">:</div>
+                <div class="countdown__item"><span id="cd-hours" class="countdown__num">00</span><span
+                        class="countdown__unit">Heures</span></div>
+                <div class="countdown__sep">:</div>
+                <div class="countdown__item"><span id="cd-mins" class="countdown__num">00</span><span
+                        class="countdown__unit">Minutes</span></div>
+                <div class="countdown__sep">:</div>
+                <div class="countdown__item"><span id="cd-secs" class="countdown__num">00</span><span
+                        class="countdown__unit">Secondes</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       INVITATION
+  ══════════════════════════════════════════ -->
+    <section class="invitation" id="invitation">
+        <div class="container container--narrow">
+            <p class="section-label">Invitation officielle</p>
+            <h2 class="section-title">Vous êtes cordialement invité(e)</h2>
+            <div class="invite-card">
+                <div class="invite-card__top">
+                    <div class="rose-deco">🌸</div>
+                    <p class="invite-card__intro">Nous avons le bonheur de vous convier à la célébration du</p>
+                    <p class="invite-card__highlight">18<sup>ème</sup> anniversaire de</p>
+                    <p class="invite-card__name">Nkomba–Dimouamoua Mouangue<br><strong>Laureine Martine Étienne</strong>
+                    </p>
+                </div>
+                <div class="invite-card__details">
+                    <div class="detail-row">
+                        <span class="detail-icon">📅</span>
+                        <div>
+                            <strong>Date</strong>
+                            <span>21 Mars 2026</span>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">📍</span>
+                        <div>
+                            <strong>Lieu</strong>
+                            <span>Ferme Municipale des Associations<br>7 Grande Rue, Bruyères-sur-Oise (95)</span>
+                        </div>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-icon">🌸</span>
+                        <div>
+                            <strong>Salle</strong>
+                            <span>Salle FUCHSIA</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="invite-card__footer">Ta présence est le plus beau des cadeaux.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       GALERIE PHOTOS
+  ══════════════════════════════════════════ -->
+    <section class="gallery" id="galerie">
+        <div class="container">
+            <p class="section-label">Galerie de souvenirs</p>
+            <h2 class="section-title">À travers les années</h2>
+            <p class="section-sub">Des instants précieux, des visages aimés.</p>
+
+            <div class="gallery__grid">
+
+                <!-- Photo 1 – Petite -->
+                <div class="gallery__card gallery__card--wide">
+                    <div class="gallery__img-wrap" id="photo-enfant">
+                        <img src="images/petite.jpeg" alt="Laureine toute petite" />
+                    </div>
+                    <div class="gallery__caption">
+                        <span class="gallery__caption-icon">🍼</span>
+                        <p>Ses premiers sourires</p>
+                        <small>La petite princesse est née</small>
+                    </div>
+                </div>
+
+                <!-- Photo 2 – Grande sœur -->
+                <div class="gallery__card">
+                    <div class="gallery__img-wrap" id="photo-soeur">
+                        <img src="images/soeur.jpeg" alt="Laureine et sa grande sœur" />
+                    </div>
+                    <div class="gallery__caption">
+                        <span class="gallery__caption-icon">👭</span>
+                        <p>Complices pour la vie</p>
+                        <small>L'amour entre sœurs est éternel</small>
+                    </div>
+                </div>
+
+                <!-- Photo 3 – Père -->
+                <div class="gallery__card">
+                    <div class="gallery__img-wrap" id="photo-pere">
+                        <img src="images/papa.jpeg" alt="Laureine et son père" />
+                    </div>
+                    <div class="gallery__caption">
+                        <span class="gallery__caption-icon">👨‍👧</span>
+                        <p>Son premier héros</p>
+                        <small>Papa, le gardien de ses rêves</small>
+                    </div>
+                </div>
+
+                <!-- Photo 4 – Mère -->
+                <div class="gallery__card">
+                    <div class="gallery__img-wrap" id="photo-mere">
+                        <img src="images/maman.jpeg" alt="Laureine et sa mère" />
+                    </div>
+                    <div class="gallery__caption">
+                        <span class="gallery__caption-icon">👩‍👧</span>
+                        <p>Son amour inconditionnel</p>
+                        <small>Maman, force et tendresse</small>
+                    </div>
+                </div>
+
+                <!-- Photo 5 – Aujourd'hui -->
+                <div class="gallery__card gallery__card--wide">
+                    <div class="gallery__img-wrap gallery__img-wrap--tall" id="photo-actuelle">
+                        <img src="images/actuel.jpeg" alt="Laureine aujourd'hui, 18 ans" />
+                    </div>
+                    <div class="gallery__caption">
+                        <span class="gallery__caption-icon">✨</span>
+                        <p>La femme qu'elle est devenue</p>
+                        <small>Plus belle que jamais</small>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       MESSAGE
+  ══════════════════════════════════════════ -->
+    <section class="message" id="message">
+        <div class="container container--narrow">
+            <p class="section-label">Un mot du cœur</p>
+            <div class="message__card">
+                <span class="quote-open">"</span>
+                <p class="message__text">
+                    Laureine, en ce jour si particulier où tu souffles tes 18 bougies, nous voulons te dire combien tu
+                    illumines nos vies. Dix-huit années de bonheur, de rires, de larmes et de grandir ensemble. Tu es la
+                    fierté de ta famille, l'éclat de notre quotidien. Que cette nouvelle année t'apporte tout l'amour,
+                    la joie et le succès que tu mérites. Nous t'aimons infiniment.
+                </p>
+                <span class="quote-close">"</span>
+                <p class="message__signature">— Avec tout notre amour 💕</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       LOCALISATION
+  ══════════════════════════════════════════ -->
+    <section class="location" id="localisation">
+        <div class="container">
+            <p class="section-label">Où nous retrouver</p>
+            <h2 class="section-title">L'adresse de la fête</h2>
+
+            <div class="location__wrapper">
+                <div class="location__info">
+                    <div class="location__badge">
+                        <span>🌸 SALLE FUCHSIA 🌸</span>
+                    </div>
+                    <div class="location__detail">
+                        <div class="location__icon">🏡</div>
+                        <div>
+                            <h3>Ferme Municipale des Associations</h3>
+                            <p>7 Grande Rue<br>Bruyères-sur-Oise, 95820</p>
+                        </div>
+                    </div>
+                    <div class="location__detail">
+                        <div class="location__icon">📅</div>
+                        <div>
+                            <h3>Date de l'événement</h3>
+                            <p>Samedi 21 Mars 2026</p>
+                        </div>
+                    </div>
+                    <a href="https://maps.google.com/?q=7+Grande+Rue+Bruyeres-sur-Oise+95820" target="_blank"
+                        class="btn btn--outline">
+                        📍 Ouvrir dans Google Maps
+                    </a>
+                </div>
+
+                <div class="location__map">
+                    <img src="images/salle.png" alt="Salle FUCHSIA – Ferme Municipale des Associations"
+                        class="location__salle-img" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+       FLOATING PETALS
+  ══════════════════════════════════════════ -->
+    <div class="petals" id="petals"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
