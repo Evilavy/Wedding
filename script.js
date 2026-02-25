@@ -42,7 +42,7 @@
 
 // ── COUNTDOWN ────────────────────────────
 (function countdown() {
-  const target = new Date('2026-03-21T18:00:00');
+  const target = new Date('2026-04-18T18:00:00');
 
   function update() {
     const now = new Date();
@@ -54,15 +54,15 @@
       return;
     }
 
-    const days  = Math.floor(diff / 86400000);
+    const days = Math.floor(diff / 86400000);
     const hours = Math.floor((diff % 86400000) / 3600000);
-    const mins  = Math.floor((diff % 3600000)  / 60000);
-    const secs  = Math.floor((diff % 60000)    / 1000);
+    const mins = Math.floor((diff % 3600000) / 60000);
+    const secs = Math.floor((diff % 60000) / 1000);
 
-    document.getElementById('cd-days').textContent  = String(days).padStart(2, '0');
+    document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
     document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('cd-mins').textContent  = String(mins).padStart(2, '0');
-    document.getElementById('cd-secs').textContent  = String(secs).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
   }
 
   update();
