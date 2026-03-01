@@ -4,178 +4,321 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Joyeux 18ème Anniversaire – Laureine 🎀</title>
+    <title>Joyeux 18ème Anniversaire – Laureine �</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Bebas+Neue&family=Montserrat:wght@300;400;500;700&family=Great+Vibes&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- ✨ PARTICLES BACKGROUND -->
-    <div class="particles" id="particles"></div>
+    <!-- ══════════════════════════════════════
+     SPOTLIGHTS
+  ══════════════════════════════════════ -->
+    <div class="spotlights" id="spotlights">
+        <div class="spotlight spotlight--1"></div>
+        <div class="spotlight spotlight--2"></div>
+        <div class="spotlight spotlight--3"></div>
+    </div>
 
-    <!-- ══════════════════════════════════════════
-       HERO
-  ══════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════
+     GLITTER CANVAS
+  ══════════════════════════════════════ -->
+    <canvas id="glitter" class="glitter-canvas"></canvas>
+
+    <!-- ══════════════════════════════════════
+     MARQUEE LIGHTS (top)
+  ══════════════════════════════════════ -->
+    <div class="marquee-bar marquee-bar--top" id="marquee-top"></div>
+
+    <!-- ══════════════════════════════════════
+     HERO — RED CARPET
+  ══════════════════════════════════════ -->
     <section class="hero" id="hero">
-        <div class="hero__overlay"></div>
-        <div class="hero__content">
-            <p class="hero__eyebrow">✨ &nbsp; Bienvenue à une célébration très spéciale &nbsp; ✨</p>
-            <h1 class="hero__title">Joyeux<br><span class="script">18<sup>ème</sup> Anniversaire</span></h1>
-            <h2 class="hero__name">Laureine Martine Étienne</h2>
-            <p class="hero__date">21 Mars 2008 · Paris, La Pitié-Salpêtrière</p>
-            <div class="hero__divider">
-                <span></span><span class="diamond">◆</span><span></span>
+
+        <!-- Carpet strip left & right -->
+        <div class="carpet-strip carpet-strip--left"></div>
+        <div class="carpet-strip carpet-strip--right"></div>
+
+        <div class="hero__inner">
+            <!-- LEFT: text content -->
+            <div class="hero__content">
+                <p class="hero__studio">⭐ &nbsp; PRÉSENTE &nbsp; ⭐</p>
+
+                <div class="hero__marquee-mini">
+                    <span class="blink-light"></span>
+                    <span class="blink-light"></span>
+                    <span class="blink-light"></span>
+                    <span class="blink-light"></span>
+                    <span class="blink-light"></span>
+                </div>
+
+                <h1 class="hero__title">
+                    <span class="hero__title-top">JOYEUX</span>
+                    <span class="hero__title-big"><span class="script-gold">18</span><sup>ème</sup></span>
+                    <span class="hero__title-sub">ANNIVERSAIRE</span>
+                </h1>
+
+                <div class="hero__divider">
+                    <span class="divider-line"></span>
+                    <span class="divider-star">★</span>
+                    <span class="divider-line"></span>
+                </div>
+
+                <h2 class="hero__name">Laureine Martine Étienne</h2>
+                <p class="hero__dates">Née le 21 Mars 2008 &bull; Paris, La Pitié-Salpêtrière</p>
+
+                <div class="hero__marquee-mini hero__marquee-mini--bottom">
+                    <span class="blink-light"></span>
+                    <span class="blink-light"></span>
+                    <span class="blink-light"></span>
+                    <span class="blink-light"></span>
+                    <span class="blink-light"></span>
+                </div>
+
+                <p class="hero__tagline">"Dix-huit ans d'une étoile qui n'a cessé de briller."</p>
+
+                <a href="#invitation" class="btn btn--hero">
+                    🎬 &nbsp; Voir l'Invitation
+                </a>
             </div>
-            <p class="hero__tagline">Dix-huit ans de lumière, d'amour et de grâce.</p>
-            <a href="#invitation" class="btn btn--hero">Voir l'invitation ↓</a>
+
+            <!-- RIGHT: photo in film frame -->
+            <div class="hero__film-frame">
+                <div class="film-strip film-strip--top">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="film-photo">
+                    <img src="images/actuel.jpeg" alt="Laureine" />
+                    <div class="film-photo__star">⭐</div>
+                </div>
+                <div class="film-strip film-strip--bottom">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <p class="film-frame__name">LAUREINE</p>
+            </div>
         </div>
 
-        <!-- Main photo -->
-        <div class="hero__photo-frame">
-            <div class="hero__photo-img" id="photo-main">
-                <img src="images/actuel.jpeg" alt="Laureine, photo actuelle" />
+        <!-- Walk of Fame star -->
+        <div class="walk-of-fame">
+            <div class="wof-star">
+                <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="60,5 72,42 112,42 80,65 92,102 60,80 28,102 40,65 8,42 48,42" fill="#c9a030" />
+                </svg>
+                <span class="wof-name">Laureine</span>
+                <span class="wof-sub">★ 18 ANS ★</span>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-       COUNTDOWN
-  ══════════════════════════════════════════ -->
-    <section class="countdown-section">
+    <!-- ══════════════════════════════════════
+     COUNTDOWN — CLAPPERBOARD
+  ══════════════════════════════════════ -->
+    <section class="countdown-section" id="countdown-section">
+        <div class="clapper-top">
+            <div class="clapper-stripes">
+                <span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+        </div>
         <div class="container">
-            <p class="section-label">Compte à rebours</p>
+            <p class="section-label">🎬 Compte à Rebours 🎬</p>
+            <h2 class="section-title">La Première Est Dans…</h2>
             <div class="countdown" id="countdown">
-                <div class="countdown__item"><span id="cd-days" class="countdown__num">00</span><span
-                        class="countdown__unit">Jours</span></div>
+                <div class="countdown__item">
+                    <span id="cd-days" class="countdown__num">00</span>
+                    <span class="countdown__unit">Jours</span>
+                </div>
                 <div class="countdown__sep">:</div>
-                <div class="countdown__item"><span id="cd-hours" class="countdown__num">00</span><span
-                        class="countdown__unit">Heures</span></div>
+                <div class="countdown__item">
+                    <span id="cd-hours" class="countdown__num">00</span>
+                    <span class="countdown__unit">Heures</span>
+                </div>
                 <div class="countdown__sep">:</div>
-                <div class="countdown__item"><span id="cd-mins" class="countdown__num">00</span><span
-                        class="countdown__unit">Minutes</span></div>
+                <div class="countdown__item">
+                    <span id="cd-mins" class="countdown__num">00</span>
+                    <span class="countdown__unit">Minutes</span>
+                </div>
                 <div class="countdown__sep">:</div>
-                <div class="countdown__item"><span id="cd-secs" class="countdown__num">00</span><span
-                        class="countdown__unit">Secondes</span></div>
+                <div class="countdown__item">
+                    <span id="cd-secs" class="countdown__num">00</span>
+                    <span class="countdown__unit">Secondes</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-       INVITATION
-  ══════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════
+     INVITATION
+  ══════════════════════════════════════ -->
     <section class="invitation" id="invitation">
         <div class="container container--narrow">
-            <p class="section-label">Invitation officielle</p>
-            <h2 class="section-title">Vous êtes cordialement invité(e)</h2>
-            <div class="invite-card">
-                <div class="invite-card__top">
-                    <div class="rose-deco">🌸</div>
-                    <p class="invite-card__intro">Nous avons le bonheur de vous convier à la célébration du</p>
-                    <p class="invite-card__highlight">18<sup>ème</sup> anniversaire de</p>
-                    <p class="invite-card__name">Nkomba–Dimouamoua Mouangue<br><strong>Laureine Martine Étienne</strong>
-                    </p>
+            <p class="section-label">★ Invitation Officielle ★</p>
+            <h2 class="section-title">Votre Ticket VIP</h2>
+
+            <div class="ticket">
+                <!-- Ticket left -->
+                <div class="ticket__main">
+                    <div class="ticket__top-bar">
+                        <span>V.I.P</span>
+                        <span>★ ★ ★</span>
+                        <span>ADMIT ONE</span>
+                    </div>
+
+                    <div class="ticket__body">
+                        <p class="ticket__presents">Nkomba–Dimouamoua Mouangue</p>
+                        <p class="ticket__headline">présente</p>
+                        <h3 class="ticket__star-name">Laureine<br>Martine Étienne</h3>
+                        <p class="ticket__subtitle">dans</p>
+                        <p class="ticket__show">« 18 ANS DE GLOIRE »</p>
+
+                        <div class="ticket__details">
+                            <div class="ticket__detail">
+                                <span class="ticket__detail-icon">📅</span>
+                                <div>
+                                    <strong>DATE</strong>
+                                    <span>Samedi 18 Avril 2026</span>
+                                </div>
+                            </div>
+                            <div class="ticket__detail">
+                                <span class="ticket__detail-icon">📍</span>
+                                <div>
+                                    <strong>LIEU</strong>
+                                    <span>Ferme Municipale des Associations<br>7 Grande Rue, Bruyères-sur-Oise
+                                        (95)</span>
+                                </div>
+                            </div>
+                            <div class="ticket__detail">
+                                <span class="ticket__detail-icon">�</span>
+                                <div>
+                                    <strong>SALLE</strong>
+                                    <span>Salle FUCHSIA</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ticket__footer">
+                        <span>★ TA PRÉSENCE EST LE PLUS BEAU DES CADEAUX ★</span>
+                    </div>
                 </div>
-                <div class="invite-card__details">
-                    <div class="detail-row">
-                        <span class="detail-icon">📅</span>
-                        <div>
-                            <strong>Date</strong>
-                            <span>18 Avril 2026</span>
-                        </div>
+
+                <!-- Ticket stub -->
+                <div class="ticket__stub">
+                    <div class="ticket__stub-text">
+                        <span>V</span><span>.</span><span>I</span><span>.</span><span>P</span>
                     </div>
-                    <div class="detail-row">
-                        <span class="detail-icon">📍</span>
-                        <div>
-                            <strong>Lieu</strong>
-                            <span>Ferme Municipale des Associations<br>7 Grande Rue, Bruyères-sur-Oise (95)</span>
-                        </div>
-                    </div>
-                    <div class="detail-row">
-                        <span class="detail-icon">🌸</span>
-                        <div>
-                            <strong>Salle</strong>
-                            <span>Salle FUCHSIA</span>
-                        </div>
-                    </div>
+                    <p class="ticket__stub-date">18 Avr<br>2026</p>
+                    <div class="ticket__stub-stars">★<br>★<br>★</div>
                 </div>
-                <p class="invite-card__footer">Ta présence est le plus beau des cadeaux.</p>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-       GALERIE PHOTOS
-  ══════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════
+     GALERIE — FILM STRIP
+  ══════════════════════════════════════ -->
     <section class="gallery" id="galerie">
         <div class="container">
-            <p class="section-label">Galerie de souvenirs</p>
-            <h2 class="section-title">À travers les années</h2>
-            <p class="section-sub">Des instants précieux, des visages aimés.</p>
+            <p class="section-label">★ Galerie ★</p>
+            <h2 class="section-title">À Travers les Années</h2>
+            <p class="section-sub">Retour sur les plus beaux moments de la star.</p>
 
             <div class="gallery__grid">
 
                 <!-- Photo 1 – Petite -->
                 <div class="gallery__card gallery__card--wide">
-                    <div class="gallery__img-wrap" id="photo-enfant">
+                    <div class="gallery__film-strip">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="gallery__img-wrap">
                         <img src="images/petite.jpeg" alt="Laureine toute petite" />
+                        <div class="gallery__overlay">
+                            <span class="gallery__play">★</span>
+                        </div>
                     </div>
                     <div class="gallery__caption">
-                        <span class="gallery__caption-icon">🍼</span>
-                        <p>Ses premiers sourires</p>
-                        <small>La petite princesse est née</small>
+                        <span class="gallery__num">01</span>
+                        <div>
+                            <p>Ses premiers sourires</p>
+                            <small>La petite étoile est née</small>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Photo 2 – Grande sœur -->
                 <div class="gallery__card">
-                    <div class="gallery__img-wrap" id="photo-soeur">
+                    <div class="gallery__film-strip">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="gallery__img-wrap">
                         <img src="images/soeur.jpeg" alt="Laureine et sa grande sœur" />
+                        <div class="gallery__overlay"><span class="gallery__play">★</span></div>
                     </div>
                     <div class="gallery__caption">
-                        <span class="gallery__caption-icon">👭</span>
-                        <p>Complices pour la vie</p>
-                        <small>L'amour entre sœurs est éternel</small>
+                        <span class="gallery__num">02</span>
+                        <div>
+                            <p>Complices pour la vie</p>
+                            <small>L'amour entre sœurs est éternel</small>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Photo 3 – Père -->
                 <div class="gallery__card">
-                    <div class="gallery__img-wrap" id="photo-pere">
+                    <div class="gallery__film-strip">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="gallery__img-wrap">
                         <img src="images/papa.jpeg" alt="Laureine et son père" />
+                        <div class="gallery__overlay"><span class="gallery__play">★</span></div>
                     </div>
                     <div class="gallery__caption">
-                        <span class="gallery__caption-icon">👨‍👧</span>
-                        <p>Son premier héros</p>
-                        <small>Papa, le gardien de ses rêves</small>
+                        <span class="gallery__num">03</span>
+                        <div>
+                            <p>Son premier héros</p>
+                            <small>Papa, le gardien de ses rêves</small>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Photo 4 – Mère -->
                 <div class="gallery__card">
-                    <div class="gallery__img-wrap" id="photo-mere">
+                    <div class="gallery__film-strip">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="gallery__img-wrap">
                         <img src="images/maman.jpeg" alt="Laureine et sa mère" />
+                        <div class="gallery__overlay"><span class="gallery__play">★</span></div>
                     </div>
                     <div class="gallery__caption">
-                        <span class="gallery__caption-icon">👩‍👧</span>
-                        <p>Son amour inconditionnel</p>
-                        <small>Maman, force et tendresse</small>
+                        <span class="gallery__num">04</span>
+                        <div>
+                            <p>Son amour inconditionnel</p>
+                            <small>Maman, force et tendresse</small>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Photo 5 – Aujourd'hui -->
                 <div class="gallery__card gallery__card--wide">
-                    <div class="gallery__img-wrap gallery__img-wrap--tall" id="photo-actuelle">
+                    <div class="gallery__film-strip">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="gallery__img-wrap gallery__img-wrap--tall">
                         <img src="images/actuel.jpeg" alt="Laureine aujourd'hui, 18 ans" />
+                        <div class="gallery__overlay"><span class="gallery__play">★</span></div>
                     </div>
                     <div class="gallery__caption">
-                        <span class="gallery__caption-icon">✨</span>
-                        <p>La femme qu'elle est devenue</p>
-                        <small>Plus belle que jamais</small>
+                        <span class="gallery__num">05</span>
+                        <div>
+                            <p>La femme qu'elle est devenue</p>
+                            <small>Plus glamour que jamais</small>
+                        </div>
                     </div>
                 </div>
 
@@ -183,71 +326,94 @@
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-       MESSAGE
-  ══════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════
+     MESSAGE
+  ══════════════════════════════════════ -->
     <section class="message" id="message">
         <div class="container container--narrow">
-            <p class="section-label">Un mot du cœur</p>
+            <p class="section-label">★ Un Mot du Cœur ★</p>
+
             <div class="message__card">
-                <span class="quote-open">"</span>
-                <p class="message__text">
-                    Laureine, en ce jour si particulier où tu souffles tes 18 bougies, nous voulons te dire combien tu
-                    illumines nos vies. Dix-huit années de bonheur, de rires, de larmes et de grandir ensemble. Tu es la
-                    fierté de ta famille, l'éclat de notre quotidien. Que cette nouvelle année t'apporte tout l'amour,
-                    la joie et le succès que tu mérites. Nous t'aimons infiniment.
-                </p>
-                <span class="quote-close">"</span>
-                <p class="message__signature">— Avec tout notre amour 💕</p>
+                <div class="message__lights">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <div class="message__inner">
+                    <span class="quote-mark">"</span>
+                    <p class="message__text">
+                        Laureine, en ce jour si particulier où tu souffles tes 18 bougies,
+                        nous voulons te dire combien tu illumines nos vies. Dix-huit années
+                        de bonheur, de rires, de larmes et de grandir ensemble. Tu es la
+                        fierté de ta famille, l'éclat de notre quotidien. Que cette nouvelle
+                        année t'apporte tout l'amour, la joie et le succès que tu mérites.
+                        Nous t'aimons infiniment.
+                    </p>
+                    <span class="quote-mark quote-mark--close">"</span>
+                    <p class="message__signature">— Avec tout notre amour &nbsp;�</p>
+                </div>
+                <div class="message__lights message__lights--bottom">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-       LOCALISATION
-  ══════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════
+     LOCALISATION
+  ══════════════════════════════════════ -->
     <section class="location" id="localisation">
         <div class="container">
-            <p class="section-label">Où nous retrouver</p>
-            <h2 class="section-title">L'adresse de la fête</h2>
+            <p class="section-label">★ Où Nous Retrouver ★</p>
+            <h2 class="section-title">L'Adresse de la Première</h2>
 
             <div class="location__wrapper">
                 <div class="location__info">
                     <div class="location__badge">
-                        <span>🌸 SALLE FUCHSIA 🌸</span>
+                        ★ &nbsp; SALLE FUCHSIA &nbsp; ★
                     </div>
+
                     <div class="location__detail">
-                        <div class="location__icon">🏡</div>
+                        <div class="location__icon">�️</div>
                         <div>
                             <h3>Ferme Municipale des Associations</h3>
                             <p>7 Grande Rue<br>Bruyères-sur-Oise, 95820</p>
                         </div>
                     </div>
+
                     <div class="location__detail">
-                        <div class="location__icon">📅</div>
+                        <div class="location__icon">�️</div>
                         <div>
                             <h3>Date de l'événement</h3>
                             <p>Samedi 18 Avril 2026</p>
                         </div>
                     </div>
+
                     <a href="https://maps.google.com/?q=7+Grande+Rue+Bruyeres-sur-Oise+95820" target="_blank"
                         class="btn btn--outline">
-                        📍 Ouvrir dans Google Maps
+                        📍 &nbsp; Ouvrir dans Google Maps
                     </a>
                 </div>
 
                 <div class="location__map">
-                    <img src="images/salle.png" alt="Salle FUCHSIA – Ferme Municipale des Associations"
-                        class="location__salle-img" />
+                    <img src="images/salle.png" alt="Salle FUCHSIA" class="location__salle-img" />
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ══════════════════════════════════════════
-       FLOATING PETALS
-  ══════════════════════════════════════════ -->
-    <div class="petals" id="petals"></div>
+    <!-- ══════════════════════════════════════
+     FOOTER
+  ══════════════════════════════════════ -->
+    <footer class="footer">
+        <div class="footer__marquee-bar" id="marquee-footer"></div>
+        <div class="footer__inner">
+            <p class="footer__script">Laureine</p>
+            <div class="footer__stars">★ ★ ★ ★ ★</div>
+            <p class="footer__born">21 MARS 2008 &bull; PARIS</p>
+            <p class="footer__copy">© 2026 — Une production de la Famille &nbsp;🌟</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
